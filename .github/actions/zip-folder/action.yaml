@@ -1,0 +1,22 @@
+﻿name: 'Zip Folder'
+description: 'Zips a folder and outputs the path to the zip file.'
+inputs:
+  folder:
+    description: 'The folder to zip'
+    required: true
+  zip-name:
+    description: 'The name of the output zip file (without .zip extension)'
+    required: true
+outputs:
+  zip-path:
+    description: 'The path to the created zip file'
+    value: ${{ steps.zip.outputs.zip-path }}
+runs:
+  using: 'composite'
+  steps:
+    - name: Zip the folder
+      id: zip
+      shell: bash
+      run: |
+        cd "${{ inputs.folder }}" && zip -r "../${{ inputs.zip-name }}.zip" ./ && cd ..
+        echo "zip-path=$(pwd)/${{ inputs.zip-name }}.zip" >> $GITHUB_OUTPUT

@@ -1,0 +1,100 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag-name:
+        description: 'The tag name to use or create'
+        required: true
+        default: 'placeholder-tag'
+      release-name:
+        description: 'The release name to create'
+        required: true
+        default: 'placeholder-release'
+  create:
+    tags:
+      - '**' # Trigger when any tag is created
+
+jobs:
+  build-release:
+    name: Publish Samples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Zip AR Spectator
+        id: zip1
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'AR Spectator'
+          zip-name: 'Normcore-AR-Spectator'
+
+      - name: Zip Addressables Recipe
+        id: zip2
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'Addressables Recipe'
+          zip-name: 'Normcore-Addressables-Recipe'
+
+      - name: Zip Normcore Multiplayer Drawing Singleplayer
+        id: zip3
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'Multiplayer Drawing/Normcore Multiplayer Drawing-Singleplayer'
+          zip-name: 'Normcore-Multiplayer-Drawing-Singleplayer'
+
+      - name: Zip Normcore Multiplayer Drawing Multiplayer
+        id: zip4
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'Multiplayer Drawing/Normcore Multiplayer Drawing-Multiplayer'
+          zip-name: 'Normcore-Multiplayer-Drawing-Multiplayer'
+
+      - name: Zip RPC Events Recipe Template
+        id: zip5
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'RPC Events Recipe/RPC Events Recipe - Template'
+          zip-name: 'Normcore-RPC-Events-Recipe-Template'
+
+      - name: Zip RPC Events Recipe Complete
+        id: zip6
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'RPC Events Recipe/RPC Events Recipe - Complete'
+          zip-name: 'Normcore-RPC-Events-Recipe-Complete'
+
+      - name: Zip Synchronizing Custom Data
+        id: zip7
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'Synchronizing Custom Data'
+          zip-name: 'Normcore-Synchronizing-Custom-Data'
+
+      - name: Process Tag Name
+        id: process-tag-name
+        run: |
+          # Use the names from workflow_dispatch input if manually triggered
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "release-name=${{ github.event.inputs.release-name }}" >> $GITHUB_OUTPUT
+            echo "tag-name=${{ github.event.inputs.tag-name }}" >> $GITHUB_OUTPUT
+          else
+            echo "release-name=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+            echo "tag-name=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create release and upload files
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ steps.process-tag-name.outputs.release-name }}
+          tag_name: ${{ steps.process-tag-name.outputs.tag-name }}
+          make_latest: true
+          files: |
+            Normcore.unitypackage
+            ${{ steps.zip1.outputs.zip-path }}
+            ${{ steps.zip2.outputs.zip-path }}
+            ${{ steps.zip3.outputs.zip-path }}
+            ${{ steps.zip4.outputs.zip-path }}
+            ${{ steps.zip5.outputs.zip-path }}
+            ${{ steps.zip6.outputs.zip-path }}
+            ${{ steps.zip7.outputs.zip-path }}
