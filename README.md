@@ -16,6 +16,11 @@ This file should explain how to install (ex specific Unity version) and open the
 		* Because the new input system is harder to understand for beginners.
 
 # TODO
+* Update AR Core components in AR Spectator
+	* 1-2 obsolete components, easy
+	* Tested an Android mobile build, it works well
+
+# TODO
 * OpenXR works out of the box
 * But you need to specify your input controller types (they call it an interaction profile) in Project Settings
 * I've enabled the Quest controller interaction profiles
