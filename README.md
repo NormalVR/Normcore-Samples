@@ -2,6 +2,10 @@
 This file should explain how to install (ex specific Unity version) and open the sample projects.
 
 # TODO
+* Update obsolete Normcore API
+	* Ex Realtime.Instantiate warning in multiplayer drawing app sample
+
+# TODO
 * OpenXR works out of the box
 * But you need to specify your input controller types (they call it an interaction profile) in Project Settings
 * I've enabled the Quest controller interaction profiles
