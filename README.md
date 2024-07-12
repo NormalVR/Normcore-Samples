@@ -10,6 +10,12 @@ This file should explain how to install (ex specific Unity version) and open the
 	* Can be done for any XR device using Unity's API: https://github.com/NormalVR/Normcore/blob/6a515dbed77d171f6b4fa76cc56d29ef48cbf3f5/Internal/Normcore%202022/Assets/XRRig/XRTrackingOriginMode.cs
 
 # TODO
+* Migrate from XRNodeState to Tracked Pose Driver in the Brush samples?
+	* These are the only samples that use XRNodeState in their code for tracking
+	* A few samples use the old input system in their code, but I don't think we need to blanket migrate to the new input system.
+		* Because the new input system is harder to understand for beginners.
+
+# TODO
 * OpenXR works out of the box
 * But you need to specify your input controller types (they call it an interaction profile) in Project Settings
 * I've enabled the Quest controller interaction profiles
