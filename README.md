@@ -8,7 +8,7 @@ This file should explain how to install (ex specific Unity version) and open the
 # TODO
 * OculusSetFloorTrackingOriginWithoutPlugin
 	* Can be done for any XR device using Unity's API: https://github.com/NormalVR/Normcore/blob/6a515dbed77d171f6b4fa76cc56d29ef48cbf3f5/Internal/Normcore%202022/Assets/XRRig/XRTrackingOriginMode.cs
-	* Since we're using OpenXR atm instead of the Oculus plugin, libOVR wouldn't work
+	* Since we're using OpenXR atm instead of the Oculus plugin, OVRPlugin and OculusSetFloorTrackingOriginWithoutPlugin wouldn't work
 
 # TODO
 * Migrate from XRNodeState to Tracked Pose Driver in the Brush samples?
