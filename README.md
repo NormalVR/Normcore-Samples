@@ -8,6 +8,7 @@ This file should explain how to install (ex specific Unity version) and open the
 # TODO
 * OculusSetFloorTrackingOriginWithoutPlugin
 	* Can be done for any XR device using Unity's API: https://github.com/NormalVR/Normcore/blob/6a515dbed77d171f6b4fa76cc56d29ef48cbf3f5/Internal/Normcore%202022/Assets/XRRig/XRTrackingOriginMode.cs
+	* Since we're using OpenXR atm instead of the Oculus plugin, libOVR wouldn't work
 
 # TODO
 * Migrate from XRNodeState to Tracked Pose Driver in the Brush samples?
@@ -17,8 +18,8 @@ This file should explain how to install (ex specific Unity version) and open the
 
 # TODO
 * Update AR Core components in AR Spectator
-	* 1-2 obsolete components, easy
-	* Tested an Android mobile build, it works well
+	* There's 1-2 obsolete components, should be easy to update
+	* Tested an Android mobile build. It works well!
 
 # TODO
 * OpenXR works out of the box
@@ -30,4 +31,5 @@ This file should explain how to install (ex specific Unity version) and open the
 # Versions
 * Unity LTS - 2022.3.37f1
 * Normcore 2.10.4
+* OpenXR plugin
 * Built-in renderer (not URP or HDRP)
