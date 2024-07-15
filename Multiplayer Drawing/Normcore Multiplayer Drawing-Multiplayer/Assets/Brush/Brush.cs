@@ -40,7 +40,11 @@ public class Brush : MonoBehaviour {
         // If the trigger is pressed and we haven't created a new brush stroke to draw, create one!
         if (triggerPressed && _activeBrushStroke == null) {
             // Instantiate a copy of the Brush Stroke prefab, set it to be owned by us.
-            GameObject brushStrokeGameObject = Realtime.Instantiate(_brushStrokePrefab.name, ownedByClient: true, useInstance: _realtime);
+            var options = new Realtime.InstantiateOptions {
+                ownedByClient            = true,     // Make sure the RealtimeView on this prefab is owned by this client.
+                useInstance              = _realtime // Use the instance of Realtime that fired the didConnectToRoom event.
+            };
+            GameObject brushStrokeGameObject = Realtime.Instantiate(_brushStrokePrefab.name, options);
 
             // Grab the BrushStroke component from it
             _activeBrushStroke = brushStrokeGameObject.GetComponent<BrushStroke>();
