@@ -4,7 +4,7 @@ This page does a short overview of the build process: https://docs.unity3d.com/M
 # Scene selection
 Don't forget to double-check which scenes are included in the build. Note that the top-most scene inside the `Build Settings` window is the one that will be loaded at startup.
 
-For example the AR Spectator sample has 2 scenes that are meant for two different platforms (VR & mobile) - make sure the scenes list inside the `Build Settings` window reflects your target platform before you build. Add or re-order the scenes as needed.
+For example the AR Spectator sample has two scenes that are meant for two different platforms (VR & mobile), so make sure that the scenes list inside the `Build Settings` window reflects your target platform before you build. Add or re-order the scenes as necessary.
 
 # Standalone and PCVR
 This platform has the simplest build process. There's no tricky steps required, simply press the `Build` button inside the `Build Settings` window.
