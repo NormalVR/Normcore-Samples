@@ -13,6 +13,6 @@ If you're building to a different XR device then you'll have to add its interact
 ![](Images/InteractionProfiles.jpg)
 
 ## Can't switch to the Android build target
-If the Android build target is greyed out inside the Build Settings, it means that module isn't installed.
+If the Android build target is grayed out inside the Build Settings, it means that module isn't installed.
 
 Install it by following [these steps](https://docs.unity3d.com/Manual/android-sdksetup.html).
