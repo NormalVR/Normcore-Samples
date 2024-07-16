@@ -5,23 +5,23 @@ This repository contains samples that illustrate how to use [Normcore](https://n
 
 ## Guides
 Each sample is accompanied by a guide that walks you through the details:
-* [Creating a Player Controller](https://normcore.io/documentation/guides/creating-a-player-controller)
 * [Creating a Multiplayer Drawing App](https://normcore.io/documentation/guides/creating-a-multiplayer-drawing-app)
 * [Using AR as a Spectator View for Your XR App](https://normcore.io/documentation/guides/using-ar-as-a-spectator-view)
+* [Synchronizing Custom Data](https://normcore.io/documentation/realtime/synchronizing-custom-data)
 * [Recipe: RPC Events](https://normcore.io/documentation/guides/recipes/rpc-events)
 * [Recipe: Using Addressables](https://normcore.io/documentation/guides/recipes/using-addressables)
 
 # Downloading the samples
-Click "Download Zip" or clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git).
+Click "Download ZIP" or clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git).
 
-TODO "Download zip" screenshot
+![](~Docs/Images/Download ZIP.jpg)
 
 # Opening the samples
 * Download and open the [Unity Hub](https://unity.com/unity-hub)
 * Click "Add project from disk" and select the root directory of the sample you'd like to open
 * If Unity Hub prompts you to install the editor, proceed with the installation
 
-TODO "Add project from disk" screenshot
+![](~Docs/Images/Add Project From Disk.jpg)
 
 # Running the samples
 ## Preparation

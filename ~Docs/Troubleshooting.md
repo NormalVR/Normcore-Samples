@@ -10,7 +10,7 @@ OpenXR needs a list of XR input controllers. We added the Meta Quest controllers
 
 If you're building to a different XR device then you'll have to add its interaction profiles inside this menu:
 
-TODO screenshot of interaction profiles UI
+![](Images/Interaction Profiles.jpg)
 
 ## Can't switch to the Android build target
 If the Android build target is greyed out inside the Build Settings, it means that module isn't installed.
