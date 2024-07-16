@@ -12,7 +12,7 @@ Each sample is accompanied by a guide that walks you through the details:
 * [Recipe: Using Addressables](https://normcore.io/documentation/guides/recipes/using-addressables)
 
 # Downloading the samples
-Click "Download ZIP" or clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git).
+Clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git). Or click "Download ZIP" and unzip the contained files.
 
 ![](~Docs/Images/DownloadZIP.jpg)
 
