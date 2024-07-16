@@ -1,11 +1,15 @@
-TODO promo art or screenshot
+![](~Docs/Images/Header.jpg)
 
 # About
-TODO describe & link Normcore
+This repository contains samples that illustrate how to use [Normcore](https://normcore.io/) for seamless multiplayer in Unity.
 
-TODO describe samples
-
-TODO link to sample guides
+## Guides
+Each sample is accompanied by a guide that walks you through the details:
+* [Creating a Player Controller](https://normcore.io/documentation/guides/creating-a-player-controller)
+* [Creating a Multiplayer Drawing App](https://normcore.io/documentation/guides/creating-a-multiplayer-drawing-app)
+* [Using AR as a Spectator View for Your XR App](https://normcore.io/documentation/guides/using-ar-as-a-spectator-view)
+* [Recipe: RPC Events](https://normcore.io/documentation/guides/recipes/rpc-events)
+* [Recipe: Using Addressables](https://normcore.io/documentation/guides/recipes/using-addressables)
 
 # Downloading the samples
 Click "Download Zip" or clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git).

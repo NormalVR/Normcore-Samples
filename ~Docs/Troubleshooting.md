@@ -15,4 +15,4 @@ TODO screenshot of interaction profiles UI
 ## Can't switch to the Android build target
 If the Android build target is greyed out inside the Build Settings, it means that module isn't installed.
 
-Install it by following these steps: https://docs.unity3d.com/Manual/android-sdksetup.html
+Install it by following [these steps](https://docs.unity3d.com/Manual/android-sdksetup.html).
