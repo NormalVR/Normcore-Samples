@@ -14,14 +14,14 @@ Each sample is accompanied by a guide that walks you through the details:
 # Downloading the samples
 Click "Download ZIP" or clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git).
 
-![](~Docs/Images/Download ZIP.jpg)
+![](~Docs/Images/DownloadZIP.jpg)
 
 # Opening the samples
 * Download and open the [Unity Hub](https://unity.com/unity-hub)
 * Click "Add project from disk" and select the root directory of the sample you'd like to open
 * If Unity Hub prompts you to install the editor, proceed with the installation
 
-![](~Docs/Images/Add Project From Disk.jpg)
+![](~Docs/Images/AddProjectFromDisk.jpg)
 
 # Running the samples
 ## Preparation
