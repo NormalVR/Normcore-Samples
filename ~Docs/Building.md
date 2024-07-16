@@ -13,7 +13,7 @@ This platform has the simplest build process. There's no tricky steps required, 
 TODO
 
 # Mobile (Android)
-* Switch to the Android build target
+* Switch to the Android build target (if it's grayed out it means you need to [install the Android module](https://docs.unity3d.com/Manual/android-sdksetup.html))
 * Go to the `XR Plug-In Management` section in the Project Settings
 * Switch to the Android tab
 * Enable the `ARCore` XR plugin
