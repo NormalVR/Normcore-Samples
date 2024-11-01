@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: -1424795628, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _autoInitialized: 0
+  _autoInitialized: 1
   _obsoleteAppKey: 
   _normcoreAppSettings: {fileID: 11400000, guid: 35e75784ab1ac420684f4572763c9a95, type: 2}
   _joinRoomOnStart: 1
@@ -280,6 +280,7 @@ MonoBehaviour:
   _realtimePrefabsToPreload:
   - m_AssetGUID: 114126aa1778b4e86accfcc6c80da542
     m_SubObjectName: 
+    m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
 --- !u!1 &1764129880
@@ -315,6 +316,7 @@ MonoBehaviour:
   _testAsset:
     m_AssetGUID: 114126aa1778b4e86accfcc6c80da542
     m_SubObjectName: 
+    m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
 --- !u!4 &1764129882
