@@ -45,7 +45,7 @@ See [this page](~Docs/Troubleshooting.md) for common questions and answers.
 # Versions
 The Unity projects in this repo are currently using:
 
-* Unity 2022.3.37f1 (LTS)
-* Normcore 2.10.4
+* Unity 2022.3.37f1
+* Normcore 2.12.1
 * OpenXR plugin by default
 * Built-in render pipeline (BiRP)
