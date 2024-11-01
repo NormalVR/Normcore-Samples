@@ -21,7 +21,7 @@ public partial class ExplosionEventModel {
     public event EventHandler eventDidFire;
 
     // A RealtimeCallback method that fires whenever we read any values from the server
-    [RealtimeCallback(RealtimeModelEvent.OnDidRead)]
+    [RealtimeCallback(RealtimeModelEvent.OnDidReadModel)]
     private void DidRead() {
         if (eventDidFire != null && trigger != 0)
             eventDidFire(senderID, position, scale);
