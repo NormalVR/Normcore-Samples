@@ -3,8 +3,13 @@
 # About
 This repository contains samples that illustrate how to use [Normcore](https://normcore.io/) for seamless multiplayer in Unity.
 
+## Simple examples
+A few simple examples are included directly in the [Normcore Asset Store package](https://assetstore.unity.com/packages/tools/network/normcore-free-multiplayer-voice-chat-for-all-platforms-195224) instead of this repository.
+
+Here is a guide that walks you through the [Hoverbird player example](https://normcore.io/documentation/guides/creating-a-player-controller).
+
 ## Guides
-Each sample is accompanied by a guide that walks you through the details:
+Each sample in this repository is accompanied by a guide that walks you through the details:
 * [Creating a Multiplayer Drawing App](https://normcore.io/documentation/guides/creating-a-multiplayer-drawing-app)
 * [Using AR as a Spectator View for Your XR App](https://normcore.io/documentation/guides/using-ar-as-a-spectator-view)
 * [Synchronizing Custom Data](https://normcore.io/documentation/realtime/synchronizing-custom-data)
