@@ -1,16 +1,16 @@
 ﻿# How to build
-This page does a short overview of the build process: https://docs.unity3d.com/Manual/PublishingBuilds.html
+This page includes a short overview of Unity's build process: https://docs.unity3d.com/Manual/PublishingBuilds.html
 
 # Scene selection
 Don't forget to double-check which scenes are included in the build. Note that the top-most scene inside the `Build Settings` window is the one that will be loaded at startup.
 
-For example the AR Spectator sample has two scenes that are meant for two different platforms (VR & mobile), so make sure that the scenes list inside the `Build Settings` window reflects your target platform before you build. Add or re-order the scenes as necessary.
+For example the AR Spectator sample has two scenes that are meant for two different platforms (VR & mobile), so make sure that the scenes list inside the `Build Settings` window reflects your target platform before you build. Add or remove scenes as necessary.
 
 # Standalone and PCVR
-This platform has the simplest build process. There's no tricky steps required, simply press the `Build` button inside the `Build Settings` window.
+This platform has the simplest build process. There are tricky steps required, simply press the `Build` button inside the `Build Settings` window.
 
 # Meta Quest (Android)
-Note: These instructions use the `OpenXR` XR plugin. But the `Oculus` XR plugin can also be used instead with slightly different steps.
+Note: These instructions use the `OpenXR` XR plugin. But the `Oculus` XR plugin can also be used instead.
 
 * Switch to the Android platform inside the `Build Settings` window (if it's grayed out it means you need to [install the Android module](https://docs.unity3d.com/Manual/android-sdksetup.html))
 * Go to the `XR Plug-In Management` section in the `Project Settings` window:

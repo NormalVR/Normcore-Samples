@@ -1,15 +1,10 @@
 ![](~Docs/Images/Header.jpg)
 
 # About
-This repository contains samples that illustrate how to use [Normcore](https://normcore.io/) for seamless multiplayer in Unity.
-
-## Simple examples
-A few simple examples are included directly in the [Normcore Asset Store package](https://assetstore.unity.com/packages/tools/network/normcore-free-multiplayer-voice-chat-for-all-platforms-195224) instead of this repository.
-
-Here is a guide that walks you through the [Hoverbird player example](https://normcore.io/documentation/guides/creating-a-player-controller).
+[Normcore](https://normcore.io/) is a multiplayer SDK and game server hosting service for Unity. The [Normcore Asset Store package](https://assetstore.unity.com/packages/tools/network/normcore-free-multiplayer-voice-chat-for-all-platforms-195224) comes with some basic Examples to get you started. This repository contains larger sample projects that demonstrate more complex multiplayer concepts.
 
 ## Guides
-Each sample in this repository is accompanied by a guide that walks you through the details:
+Each sample project in this repository is accompanied by a guide that walks you through the details:
 * [Creating a Multiplayer Drawing App](https://normcore.io/documentation/guides/creating-a-multiplayer-drawing-app)
 * [Using AR as a Spectator View for Your XR App](https://normcore.io/documentation/guides/using-ar-as-a-spectator-view)
 * [Synchronizing Custom Data](https://normcore.io/documentation/realtime/synchronizing-custom-data)
@@ -42,15 +37,7 @@ Clone the repo using [git](https://docs.github.com/en/get-started/using-git/abou
   * Using [ParrelSync](https://github.com/VeriorPies/ParrelSync) to open another editor window
 
 # Building the samples
-Follow the steps in [this page](~Docs/Building.md) if you'd like to build and deploy the projects on a platform of your choice.
+Some platforms (namely XR platforms) require extra configuration steps. Follow the steps in [this page](~Docs/Building.md) for more info.
 
 # Troubleshooting
 See [this page](~Docs/Troubleshooting.md) for common questions and answers.
-
-# Versions
-The Unity projects in this repo are currently using:
-
-* Unity 2022.3.37f1
-* Normcore 2.12.1
-* OpenXR plugin by default
-* Built-in render pipeline (BiRP)
