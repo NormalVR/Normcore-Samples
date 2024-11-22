@@ -7,7 +7,7 @@ Don't forget to double-check which scenes are included in the build. Note that t
 For example the AR Spectator sample has two scenes that are meant for two different platforms (VR & mobile), so make sure that the scenes list inside the `Build Settings` window reflects your target platform before you build. Add or remove scenes as necessary.
 
 # Standalone and PCVR
-This platform has the simplest build process. There are tricky steps required, simply press the `Build` button inside the `Build Settings` window.
+All you need to do is press the `Build` button inside the `Build Settings` window. That's it!
 
 # Meta Quest (Android)
 Note: These instructions use the `OpenXR` XR plugin. But the `Oculus` XR plugin can also be used instead.
