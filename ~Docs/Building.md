@@ -1,5 +1,5 @@
 ﻿# How to build
-This page includes a short overview of Unity's build process: https://docs.unity3d.com/Manual/PublishingBuilds.html
+This page includes a short overview of Unity's build process: https://docs.unity3d.com/2022.3/Documentation/Manual/PublishingBuilds.html
 
 # Scene selection
 Don't forget to double-check which scenes are included in the build. Note that the top-most scene inside the `Build Settings` window is the one that will be loaded at startup.
