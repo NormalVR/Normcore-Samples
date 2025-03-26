@@ -12,7 +12,9 @@ Each sample project in this repository is accompanied by a guide that walks you 
 * [Recipe: Using Addressables](https://docs.normcore.io/guides/recipes/using-addressables)
 
 # Downloading the samples
-Clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git). Or click "Download ZIP" and unzip the contained files.
+You can download the samples from the [Releases page](https://github.com/NormalVR/Normcore-Samples/releases).
+
+Alternatively, you can clone the repo using [git](https://docs.github.com/en/get-started/using-git/about-git). Or click "Download ZIP" and unzip the contained files.
 
 ![](~Docs/Images/DownloadZIP.jpg)
 
