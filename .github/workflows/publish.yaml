@@ -63,9 +63,16 @@ jobs:
         with:
           folder: 'RPC Events Recipe/RPC Events Recipe - Complete'
           zip-name: 'Normcore-RPC-Events-Recipe-Complete'
+          
+      - name: Zip Simple Examples
+        id: zip7
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'Simple Examples'
+          zip-name: 'Normcore-Simple-Examples'
 
       - name: Zip Synchronizing Custom Data
-        id: zip7
+        id: zip8
         uses: ./.github/actions/zip-folder
         with:
           folder: 'Synchronizing Custom Data'
@@ -98,3 +105,4 @@ jobs:
             ${{ steps.zip5.outputs.zip-path }}
             ${{ steps.zip6.outputs.zip-path }}
             ${{ steps.zip7.outputs.zip-path }}
+            ${{ steps.zip8.outputs.zip-path }}
