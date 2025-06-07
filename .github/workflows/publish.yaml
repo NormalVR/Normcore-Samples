@@ -78,6 +78,13 @@ jobs:
           folder: 'Synchronizing Custom Data'
           zip-name: 'Normcore-Synchronizing-Custom-Data'
 
+      - name: Zip Network Profiler
+        id: zip8
+        uses: ./.github/actions/zip-folder
+        with:
+          folder: 'Network Profiler'
+          zip-name: 'Normcore-Network-Profiler'
+
       - name: Process Tag Name
         id: process-tag-name
         run: |
