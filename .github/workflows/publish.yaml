@@ -72,7 +72,7 @@ jobs:
           zip-name: 'Normcore-Synchronizing-Custom-Data'
 
       - name: Zip Network Profiler
-        id: zip7
+        id: zip8
         uses: ./.github/actions/zip-folder
         with:
           folder: 'Network Profiler'
