@@ -2,6 +2,10 @@
 
 using UnityEngine;
 
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
+
 namespace Normal.Realtime.Examples {
     public class HoverbirdPlayer : MonoBehaviour {
         // Camera
@@ -80,8 +84,9 @@ namespace Normal.Realtime.Examples {
 
         private void RotateCamera() {
             // Get the latest mouse movement. Multiple by 4.0 to increase sensitivity.
-            _mouseLookX += Input.GetAxis("Mouse X") * 4.0f;
-            _mouseLookY += Input.GetAxis("Mouse Y") * 4.0f;
+            Vector2 mouseInput = GetLookInput() * 4.0f;
+            _mouseLookX += mouseInput.x;
+            _mouseLookY += mouseInput.y;
 
             // Clamp how far you can look up + down
             while (_mouseLookY < -180.0f) _mouseLookY += 360.0f;
@@ -93,22 +98,20 @@ namespace Normal.Realtime.Examples {
         }
 
         private void CalculateTargetMovement() {
-            // Get input movement. Multiple by 6.0 to increase speed.
-            Vector3 inputMovement = new Vector3();
-            inputMovement.x = Input.GetAxisRaw("Horizontal") * 6.0f;
-            inputMovement.z = Input.GetAxisRaw("Vertical")   * 6.0f;
+            // Get input movement. Multiple by 7.5 to increase speed.
+            Vector2 inputMovement = GetMovementInput() * 7.5f;
 
             // Get the direction the camera is looking parallel to the ground plane.
             Vector3    cameraLookForwardVector = ProjectVectorOntoGroundPlane(cameraTarget.forward);
             Quaternion cameraLookForward       = Quaternion.LookRotation(cameraLookForwardVector);
 
             // Use the camera look direction to convert the input movement from camera space to world space
-            _targetMovement = cameraLookForward * inputMovement;
+            _targetMovement = cameraLookForward * new Vector3(inputMovement.x, 0.0f, inputMovement.y);
         }
 
         private void CheckForJump() {
             // Jump if the space bar was pressed this frame and we're not already jumping, trigger the jump
-            if (Input.GetKeyDown(KeyCode.Space) && !_jumping)
+            if (GetJumpInput() && !_jumping)
                 _jumpThisFrame = true;
         }
 
@@ -208,6 +211,65 @@ namespace Normal.Realtime.Examples {
 #else
             rigidbody.velocity = velocity;
 #endif
+        }
+        
+        // Get input depending on the input system being used
+        private static Vector2 GetLookInput()
+        {
+#if ENABLE_INPUT_SYSTEM
+            Vector2 input = Vector2.zero;
+            
+            if (Mouse.current != null)
+                input += Mouse.current.delta.ReadValue() * 0.1f;
+            if (Gamepad.current != null)
+                input += Gamepad.current.rightStick.ReadValue() * 40f * Time.deltaTime;
+            
+            return input;
+#else
+            return new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+#endif
+        }
+        
+        private static Vector2 GetMovementInput()
+        {
+            Vector2 input;
+#if ENABLE_INPUT_SYSTEM
+            input = Vector2.zero;
+
+            if (Keyboard.current != null)
+            {
+                if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
+                    input.x += 1;
+                if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
+                    input.x -= 1;
+                if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
+                    input.y += 1;
+                if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
+                    input.y -= 1;
+            }
+            if (Gamepad.current != null)
+                input += Gamepad.current.leftStick.ReadValue();
+#else
+            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+#endif
+            return Vector2.ClampMagnitude(input, 1f);
+        }
+
+        private static bool GetJumpInput()
+        {
+#if ENABLE_INPUT_SYSTEM
+            bool input = false;
+            
+            if (Keyboard.current != null)
+                input |= Keyboard.current.spaceKey.wasPressedThisFrame;
+            if (Gamepad.current != null)
+                input |= Gamepad.current.buttonSouth.wasPressedThisFrame;
+            
+            return input;
+#else
+            return Input.GetKeyDown(KeyCode.Space);
+#endif
+
         }
     }
 }
