@@ -18,4 +18,7 @@ MonoBehaviour:
     editorDLL:
       prompted: 1
       migrated: 1
+    childSceneViewUUID:
+      prompted: 1
+      migrated: 1
   _projectGUID: 326ad2c2-1ee3-4bfc-9fe8-dc0a2e413eea
